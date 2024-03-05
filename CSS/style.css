@@ -1,0 +1,413 @@
+/*
+ --- 01 Typography system
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24/ 30/ 36/ 44
+
+- Font weights
+
+- Line heights
+default: 1
+
+Spacing system (px)
+2/ 4/ 8/ 12/ 16/ 24/ 32/ 48/ 64/ 80/ 96/ 128
+
+--- Colors
+
+- button: #e67e22
+shades:
+greys: #555
+black: #333
+tint: #fdf2e9
+
+images: https://unsplash.com/
+
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: "Rubik";
+    line-height: 2;
+    font-weight: 400;
+    color: #555;
+  }
+  
+  /**************************/
+
+  /* GENERAL REUSABLE COMPONENT*/
+
+  .container {
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+  }
+    .grid{
+        display: grid;
+        gap: 9.6rem;
+        
+    }
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+  .heading-primary {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333;
+    letter-spacing: -0.4px;
+    margin-bottom: 6.2rem;
+  }
+
+  /**************************/
+   /* HEADER */
+/**************************/     
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fdf2e9;
+
+            /* "sticky" header effekt, dvs. logoen blir værende når bruker skroller ned/opp */
+            height: 9.6rem;
+            padding: 3rem 6.4rem 0  5rem;
+        }
+
+    .logo {
+
+        height: 8.0rem;
+    }
+
+ /**************************/
+   /* NAVIGATION */
+/**************************/   
+
+.main-nav-list {
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+   
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    
+    text-decoration:none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active{
+
+    color: #cf711f;
+
+}
+
+.main-nav-link.nav-cta:link,
+.nav-cta:visited
+{
+padding: 1.2rem 2.4rem;
+border-radius: 9px;
+color: #fff;
+background-color: #e67e22;
+}
+
+/**************************/
+  .section-hundersenter {
+    background-color: #fdf2e9;
+    padding: 9.6rem 0;
+  }
+  
+  .hundersenter {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 9.6rem;
+  }
+  
+  .heading-tertiary {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  .subheading{
+    display: block;
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 3.6rem;
+    letter-spacing: 3px;
+  }
+  
+  .heading-primary
+  {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333;
+    letter-spacing: -0.4px;
+    margin-bottom: 6.2rem;
+  }
+  
+  .hundersenter-description {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 4.8;
+  }
+
+  .btn-container {
+    display: flex; /* Legg til dette for å bruke flexbox */
+    gap: 1rem; /* Juster avstanden mellom knappene */
+  }
+  
+  .btn:link,
+  .btn:visited {
+    transition: background-color 0.4s;
+    background-color: #e67e22;
+    font-size: 2rem;
+    padding: 1.6rem 3.2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn--CTA:link,
+  .btn--CTA:visited {
+    background-color: #e67e22;
+    color: #fff;
+  }
+  
+  .btn--CTA:hover,
+  .btn--CTA:active {
+    background-color: #cf711f;
+    background-color: red;
+  }
+  
+  .btn--outline:link,
+  .btn--outline:visited {
+    background-color: #fff;
+    color: #555;
+  }
+  
+  .btn--outline:hover,
+  .btn--outline:active {
+    background-color: #fdf2e9;
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+  
+  .header-img {
+    width: 100%;
+  }
+  
+  .margin-right-sm {
+    margin-right: 5rem !important;
+  }
+  
+  .ansatt {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 8rem;
+    flex-wrap: wrap;
+  }
+  
+  .ansatte-img {
+    display: flex;
+  }
+  
+  .ansatte-img img {
+    height: 8.4rem;
+    width: 8.4rem;
+    border-radius: 90%;
+    margin-right: 2rem;
+  }
+  
+  .ansatt-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    text-align: left;
+    width: 100%;
+  }
+
+   /**************************/
+   /* TJENESTE/BOOKING */
+/**************************/ 
+
+  .service-section{
+    padding: 9.6rem 0;
+   
+  }
+
+
+.step-img {
+    width: 70%;
+}
+
+.section-booking{
+    padding: 9.6rem 0;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+   flex-direction: column;
+   gap: 1.6rem;
+}
+
+.list-item{
+font-size: 1.4rem;
+display: flex;
+align-items: center;
+gap: 1.6rem;
+}
+
+.list-icon{
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
+}
+
+.plan-header{
+text-align: center;
+margin-bottom: 40px;
+}
+
+.plan-name{
+color: #cf711f;
+font-weight: 600;
+font-size: 1.8rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+
+}
+
+.plan-pris{
+ font-size: 5rem;
+ font-weight: 600;
+ color: #333;
+margin-bottom: 1.6rem;
+}
+
+.plan-pris span {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-right: 0.8rem;
+}
+
+.plan-text{
+font-size: 1.4rem;
+line-height: 1.4rem;
+color: #6f6f6f;
+}
+
+.plan-sign-up{
+    text-align: center;
+    margin-top: 4.8rem;
+    width: -75%;
+}
+
+.pris-plan{
+    background-color: #fdf2e9;
+    border-radius: 11px;
+    padding: 4.4rem;
+}
+
+
+
+/* Kontakt oss skjema styling */
+.contact-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn--CTA {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn--CTA:hover {
+    background-color: #cf711f;
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* sticky-meny effekt */
+    background-color: #fdf2e9; 
+}
+
+/* For mobil enheter */
+@media only screen and (max-width: 375px) {
+    
+    body {
+      font-size: 14px; 
+    }
+  }
+  
+  /* For nettbrett enheter */
+  @media only screen and (min-width: 376px) and (max-width: 768px) {
+    
+    .container {
+      max-width: 90%; 
+    }
+  }
+  
